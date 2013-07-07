@@ -8,6 +8,7 @@ gem 'multi_json'
 gem 'mysql2'
 gem 'pg'
 gem 'sqlite3'
+#gem 'jquery-rails', '~> 3.0'
 
 # Gems used only for assets and not required
 # in production environments by default.
