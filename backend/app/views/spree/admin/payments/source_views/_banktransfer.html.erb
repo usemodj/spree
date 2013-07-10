@@ -1,6 +1,5 @@
-<p> Amount: <%= @amount %></p>
-<p> Payment method: <%= @payment_method.inspect %></p>
-<p> Bank account: <%= @payment_method.bank_account.inspect %></p>
-<p> Payment : <%= @payment.inspect %></p>
-<p> Order: <%= @order.inspect %></p>
-
+<div data-hook="bank_account" class="align-center">
+  <h5> 은행: <span class="green"><%= @payment_method.bank_account.bank_name %></span></h5>
+	<h5> 계좌번호: <span class="green"><%= @payment_method.bank_account.account_number %></span></h5>
+	<h5> 예금주: <span class="green"><%= @payment_method.bank_account.account_owner %></span></h5>
+</div>
