@@ -13,7 +13,7 @@
       <tr data-hook="payments_row" class="<%= cycle('odd', 'even')%>">
         <td><%= pretty_time(payment.created_at) %></td>
         <td class='align-center'><%= payment.display_amount.to_html %></td>
-        <td class="align-center"><%= link_to payment_method_name(payment), spree.admin_order_payment_path(@order, payment) %> : <%= @order.bank_account.bank_name unless @order.bank_account.nil? %></td>
+        <td class="align-center"><%= link_to payment_method_name(payment), spree.admin_order_payment_path(@order, payment) %> : <%= payment.source.bank_account.bank_name unless payment.source.bank_account.nil? %></td>
         <td class="align-center"> <span class="state <%= payment.state %>"><%= Spree.t(payment.state, :scope => :payment_states, :default => payment.state.capitalize) %></span></td>
         <td class="actions">
           <% payment.actions.each do |action| %>

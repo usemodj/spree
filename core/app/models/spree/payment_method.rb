@@ -8,7 +8,7 @@ module Spree
     attr_accessible :name, :description, :environment, :display_on, :active
     validates :name, presence: true
 
-    has_one :bank_account #, :dependent => :destroy
+    #has_one :bank_account #, :dependent => :destroy
 
     def self.providers
       Rails.application.config.spree.payment_methods
